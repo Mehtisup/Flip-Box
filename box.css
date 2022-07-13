@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>$UP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing:border-box;
+}
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+.content {
+    width:300px;
+    height:300px;
+    position: relative;;
+    background-color:transparent;
+    perspective:1000px;
+    margin:auto;
+}
+.inner {
+    position:relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    width:100%;
+    height:100%;
+}
+.content:hover .inner {
+    transform: rotateX(180deg);
+}
+.x , .y {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    backface-visibility:hidden;;
+    color:white;
+}
+.x {
+    background-color: black;
+    color:white
+}
+.y {
+    background-color: rgb(10, 112, 63);
+    color:white;
+    transform: rotateX(180deg);
+}
+</style>
+</head>
+<body>
+<div class="content">
+    <div class="inner">
+        <div class="x">
+            <h1>YESTERDAY</h1>
+        </div>
+        <div class="y">
+            <h1>TODAY</h1>
+        </div>
+    </div>
+</div>
+</body>
+</html>
